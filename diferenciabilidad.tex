@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\author{Juan Cristi \\ email \href{mailto:jcristi@fi.uba.ar}{jcristi@fi.uba.ar}} % Si quieren poner como autor al Dto. de Matemática - FIUBA, no hay problema.
+\title{Diferenciabilidad\\ Ejemplos y contraejemplos}
+
+\renewcommand{\b}[1]{\textbf{#1}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\y}{\text{ y }}
+\newcommand{\si}{\text{ si }}
+
+\begin{document}
+\maketitle
+
+En cada caso analizar si la función
+\begin{itemize}
+	\item Es continua
+	\item Tiene derivadas parciales
+	\item Tiene derivadas direccionales para toda dirección
+	\item Es diferenciable
+	\item es $C^1$
+\end{itemize}
+
+\begin{enumerate}
+    \item Una función discontinua, no derivable
+    \[f(x,y)=\begin{cases}
+    \frac{xy}{x^2+y^2} & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+    
+    \item Una función continua, no derivable
+    \[f(x,y)=\sqrt{x^2+y^2}\]
+    
+    \item Una función discontinua, derivable en toda dirección
+    \[f(x,y)=\begin{cases}
+    \frac{xy^2}{x^2+y^4} & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+
+    \item Una función continua, derivable (solo parciales)
+    \[f(x,y)=\begin{cases}
+    \frac{xy}{\sqrt{x^2+y^2}} & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+    
+    \item Una función continua, derivable en toda dirección, no diferenciable
+    \[f(x,y)=\begin{cases}
+    \frac{xy^2}{x^2+y^2} & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+    
+    \item Una función continua, derivable en toda dirección (nulas), no diferenciable
+    \[f(x,y)=\begin{cases}
+    x & \si y=x^2 \\
+    0 & \si y\neq x^2
+    \end{cases}
+    \]
+    
+    \item Una función diferenciable, pero no $C^1$
+    \[f(x,y)=\begin{cases}
+    (x^2+y^2)\sin\left(\frac{1}{x^2+y^2}\right) & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+    
+    \item Una función $C^1$
+    \[f(x,y)=\begin{cases}
+    \frac{x^2y^2}{x^2+y^2} & \si (x,y)  \neq (0,0)\\
+    0 & \si (x,y)  \neq (0,0)
+    \end{cases}
+    \]
+\end{enumerate}
+
+
+\end{document}
